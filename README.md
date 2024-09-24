@@ -24,24 +24,29 @@ Você também deve executar migrações para criar tabelas do banco de dados e e
 ```bash
   git clone https://github.com/faelperini/04-pizza-shop-backend
 ```
-2. Instale as dependências:
+2. Abra o diretório
 ```bash
-  npm i
-  bun i
+  cd 04-pizza-shop-backend
 ```
-3. Inicie os containers do Docker:
+
+3. Instale as dependências:
+```bash
+  npm install
+  bun install
+```
+4. Inicie os containers do Docker:
 ```bash
   docker compose up -d
 ```
-4. Execute as migrações:
+5. Execute as migrações:
 ```bash
   npm run migrate
 ```
-5. Popule o banco de dados:
+6. Popule o banco de dados:
 ```bash
   npm run seed
 ```
-6. Inicie o servidor:
+7. Inicie o servidor:
 ```bash
   npm run dev
 ```
