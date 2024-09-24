@@ -1,35 +1,51 @@
-# 🍕 pizza.shop API
+# Pizza Shop - Backend
 
-Food delivery app (aka. iFood/Uber Eats) back-end built with TypeScript, Drizzle a ElysiaJS.
+## Descrição
 
-> 🔥 This project aims to keep runtime agnostic, this means it should work on Bun, Node, Cloudflare Workers or any Web Standard API compatible runtime.
+Este back-end, construído com TypeScript, Drizzle e ElysiaJS, oferece uma visão completa e detalhada para gerenciar seu restaurante. Com ele, você terá acesso a métricas cruciais para tomar decisões estratégicas e otimizar suas operações.
 
-## Running
+## Funcionalidades
 
-This project depends on Docker to setup database. With Docker installed, clone the project, install  dependencies, setup Docker containers and run the application.
+* **Análise de Vendas:**
+  * Receita total por mês
+  * Número de pedidos por mês e por dia
+  * Análise de cancelamentos
+  * Receita em períodos personalizados
+* **Gestão de Produtos:**
+  * Identificação dos produtos mais populares
 
-> You must also run migrations to create database tables and run the seed to populate the database with fake data.
+## Executando
 
-```sh
-bun i
-docker compose up -d
-bun migrate
-bun seed
-bun dev
+Este projeto depende do Docker para configurar o banco de dados. Com o Docker instalado, clone o projeto, instale as dependências, configure os contêineres do Docker e execute a aplicação.
+
+Você também deve executar migrações para criar tabelas do banco de dados e executar o seed para popular o banco de dados com dados fictícios.
+
+1. Clone o projeto:
+```bash
+  git clone https://github.com/faelperini/04-pizza-shop-backend
+```
+2. Instale as dependências:
+```bash
+  npm i
+  bun i
+```
+3. Inicie os containers do Docker:
+```bash
+  docker compose up -d
+```
+4. Execute as migrações:
+```bash
+  npm run migrate
+```
+5. Popule o banco de dados:
+```bash
+  npm run seed
+```
+6. Inicie o servidor:
+```bash
+  npm run dev
 ```
 
-## Features
+## Autenticação
 
-> The **summary** of the features are listed below. All the features contains E2E tests.
-
-- it should be able to register a new restaurant
-- it should be able to sign in as a restaurant manager
-- it should be able to register as a new customer
-- it should be able to crete an order to the restaurant
-- it should be able to manage the restaurant menu
-- it should be able to manage the restaurant evaluations
-- it should be able to leave an evaluation
-- it should be able to manage the restaurant orders
-- it should be able to update the restaurant public profile
-- it should be able to open/close the restaurant
-- it should be able to list metrics from the restaurant
+A autenticação é feita por meio de um link enviado no terminal de execução do backend após o cadastro ou login.
